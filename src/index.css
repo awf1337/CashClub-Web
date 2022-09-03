@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* =============
+    Typography
+===============*/
+p {
+    color: rgb(102, 101, 101);
+}
+
+/* =============
+    Layout
+===============*/
+
+h1 {
+    /* inherit from first child the margin-top */
+    margin-top: 0;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.generalButtons {
+    background-color: rgb(50, 188, 50);
+    border: none;
+    border-radius: 1rem;
+    padding: .75em 1.5em;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: .02rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Download Section */
+.downloadContainer {
+    margin: 40px 20px 100px;
+}
+
+.downloadContainer h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.downloadContainer p {
+    font-size: .8rem;
+    color: rgb(102, 101, 101);
+    margin: 2em 0;
+    letter-spacing: .1em;
+}
+
+/* cards layout Section*/
+.mainContainer {
+    margin: 40px 20px 100px;
+}
+
+.cardContainer {
+    background-color: red;
+    border-radius: 1rem;
+    padding: 1em;
+    margin: 20px 0;
+}
+
+.cardContainer h2 {
+    margin: 0 0 .9em;
+    font-weight: 700;
+    letter-spacing: .05rem;
+    color: rgb(255, 255, 255);
+}
+
+.cardContainer p {
+    margin: 0;
+    color: rgb(255, 255, 255);
+}
+
+/* CashBack layout Section */
+.cashBackContainer {
+    margin: 40px 20px 100px;
+    text-align: center;
+}
+
+.cashBackContainer h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.cashBackContainer p {
+    margin: 20px 0;
+}
+
+.cashBackButtonsContainer .generalButtons {
+    align-self: center;
+    margin-bottom: .5em;
+}
+
+.transparentBotton {
+    background-color: transparent;
+    color:black;
+    border: 2px solid black;
+}
+
+.cashBackButtonsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Comparator Section */
+
+.comparatorContainer {
+    margin: 40px 0 100px;
+    padding: 20px 0;
+    background-color: rgb(50, 188, 50);
+    color:rgb(255, 255, 255);
+    text-align: center;
+}
+
+.comparatorContainer h3 {
+    margin: 0 0 20px;
+}
+
+.comparatorContainer p {
+    margin: 0  0 20px;
+}
+
+.comparatorContainer .generalButtons {
+    color:rgb(50, 188, 50);
+    background: rgb(255, 255, 255);
+}
