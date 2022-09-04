@@ -2,10 +2,10 @@ import React from "react";
 
 export default function CardMainSection (props) {
     return (
-        <div className="cardContainer">
+        <div className="cardContainer" style={{backgroundColor:`${props.backgroundColor}`}}>
             <h2>{props.title}</h2>
             <p>{props.text}</p>
-            {/* <img /> */}
+            <img src={props.image} alt="" />
         </div>
     )
 }

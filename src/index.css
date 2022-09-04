@@ -7,34 +7,57 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+img {
+    width: 100%;
+}
+
+/* Custom properties */
+
+:root {
+    --clr-light-btn: linear-gradient(rgb(67, 192, 101), rgb(97, 213, 108));
+    --clr-light: rgb(67, 192, 101);
+    --clr-light-white: rgb(255, 255, 255);
+}
+
+/* General Styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
 /* =============
     Typography
 ===============*/
 p {
+    font-size: .8rem;
     color: rgb(102, 101, 101);
+    margin: 2em 0;
+    letter-spacing: .1em;
+    line-height: 1.5em;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
 }
 
 /* =============
     Layout
 ===============*/
 
-h1 {
-    /* inherit from first child the margin-top */
-    margin-top: 0;
-}
-
-.headerContainer {
-    display: flex;
-    justify-content: space-between;
-}
-
-
 .generalButtons {
-    background-color: rgb(50, 188, 50);
+    background-image: var(--clr-light-btn);
     border: none;
-    border-radius: 1rem;
+    border-radius: .75rem;
     padding: .75em 1.5em;
-    color: rgb(255, 255, 255);
+    color: var(--clr-light-white);
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: .02rem;
@@ -42,21 +65,118 @@ h1 {
     display: inline-block;
 }
 
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 20px 100px;
+}
+
+.nav span {
+    position: relative;
+    top: 30px;
+    font-size: 2.7rem;
+}
+.nav {
+    text-align: center;
+    position: fixed;
+    background: var(--clr-light-white);
+    color: rgb(0, 0, 0);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(.5,0,.5,1);
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link {
+    color: inherit;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: .5em;
+}
+
+.nav__link:hover {
+    color: var(--clr-light);
+}
+
+.nav-toggle {
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 50px;
+    z-index: 1000;
+}
+
+.nav-open .nav {
+    transform:  translateX(0);
+}
+
+.nav-open .nav-toggle {
+    position: fixed;
+}
+
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+}
+.nav-open .hamburger::after {
+    opacity: 0;
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background-color: var(--clr-light);
+    width: 3em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::before { top: 6px; }
+.hamburger::after { bottom: 6px; }
+
 /* Download Section */
 .downloadContainer {
     margin: 40px 20px 100px;
 }
 
 .downloadContainer h2 {
-    font-size: 2rem;
     margin: 0;
-}
-
-.downloadContainer p {
-    font-size: .8rem;
-    color: rgb(102, 101, 101);
-    margin: 2em 0;
-    letter-spacing: .1em;
 }
 
 /* cards layout Section*/
@@ -65,10 +185,11 @@ h1 {
 }
 
 .cardContainer {
-    background-color: red;
     border-radius: 1rem;
-    padding: 1em;
+    padding: 1em 1em 3em;
     margin: 20px 0;
+    position: relative;
+    min-height: 170px;
 }
 
 .cardContainer h2 {
@@ -79,13 +200,23 @@ h1 {
 }
 
 .cardContainer p {
+    padding-right: 3.5em;
     margin: 0;
     color: rgb(255, 255, 255);
 }
 
+.cardContainer img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 -57px -57px;
+    width: 200px;
+    transform: rotate(-40deg);
+}
+
 /* CashBack layout Section */
 .cashBackContainer {
-    margin: 40px 20px 100px;
+    margin: 40px 20px 70px;
     text-align: center;
 }
 
@@ -104,7 +235,7 @@ h1 {
 }
 
 .transparentBotton {
-    background-color: transparent;
+    background-image: none;
     color:black;
     border: 2px solid black;
 }
@@ -114,25 +245,98 @@ h1 {
     flex-direction: column;
 }
 
-/* Comparator Section */
+.carouselContainer {
+    display: flex;
+}
 
+.slide {
+    flex: 0 0 190px;
+}
+
+@keyframes moveAnim-hp-clients {
+    0% {
+        transform:translate3d(0, 0, 0);
+    }
+    100% {
+        transform:translate3d(-800px, 0, 0);
+    }
+}
+
+/* Comparator Section */
 .comparatorContainer {
     margin: 40px 0 100px;
     padding: 20px 0;
-    background-color: rgb(50, 188, 50);
+    background-image: var(--clr-light-btn);
     color:rgb(255, 255, 255);
     text-align: center;
 }
 
 .comparatorContainer h3 {
-    margin: 0 0 20px;
+    margin: 0;
+    font-size: 1.5rem;
 }
 
 .comparatorContainer p {
-    margin: 0  0 20px;
+    margin: 20px;
+    color: rgb(255, 255, 255);
 }
 
 .comparatorContainer .generalButtons {
-    color:rgb(50, 188, 50);
+    color: var(--clr-light);
     background: rgb(255, 255, 255);
+}
+
+/* Discount Section */
+.discountContainer {
+    margin: 40px 20px 100px;
+    text-align: center;
+}
+
+.discountGrid {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(3,31%);
+    grid-gap: 3%;
+}
+
+.discountGrid img {
+    border-radius: 15px;
+}
+
+/* CashClub Section */
+.cashClubContainer {
+    margin: 40px 20px 100px;
+    text-align: center;
+}
+
+.cashClubContainer p {
+    width: 70%;
+    margin: 0 auto 1em auto;
+}
+
+/* Question Section */
+.questionContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 90%;
+    height: 4rem;
+    margin: 0 auto;
+    border-radius: .5rem;
+}
+
+.questionContainer:hover {
+    cursor: pointer;
+}
+
+/* Footer Section */
+.dataFooterContainer {
+    text-align: center;
+    line-height: 1rem;
+}
+
+.dataFooterContainer {
+    background-color: rgb(240, 240, 240);
+    padding: 1em 0;
 }
