@@ -1,9 +1,12 @@
 import React from "react";
 import ImageCashClubMobil from "./Images/cashClubMobil.png"
 
-export default function CashClub() {
+export default function CashClub(props) {
     return (
-        <section className="cashClubContainer">
+        <section 
+        className="cashClubContainer"
+        ref={props.myRef}
+        >
             <h3>CashClub pe mobil</h3>
             <p> Descarca aplicatia pe mobil si printr-un simplu click ai acces la 800 de magazine, 
                 milioane de produse si mii de bonusuri.</p>

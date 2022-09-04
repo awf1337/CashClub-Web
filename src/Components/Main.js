@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import DownloadSection from "./Sections/DownloadSection";
 import MainSection from "./Sections/MainSection";
 import CashBackSection from "./Sections/CashBackSection";
@@ -8,14 +8,20 @@ import QuestionsSection from "./Sections/QuestionsSection";
 import ComparatorSection from "./Sections/ComparatorSection"
 
 export default function Main()  {
+    const myRef = useRef(null)
+    
     return (
         <div>
             <DownloadSection />
-            <MainSection />
+            <MainSection 
+            clickCashClub = {myRef}
+            />
             <CashBackSection />
             <ComparatorSection />
             <DiscountSection />
-            <CashClub />
+            <CashClub 
+            myRef = {myRef}
+            />
             <QuestionsSection />
         </div>
     )

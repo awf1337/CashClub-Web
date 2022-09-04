@@ -1,11 +1,11 @@
-import React from "react";
+import React, {useRef} from "react";
 import CardMainSection from "./Cards/CardMainSection";
 import ImageApp from "./Images/aplicatiemobil.png";
 import ImageEco from "./Images/economiseste.png";
 import ImageBalance from "./Images/balanta.png";
 import ImageTansactions from "./Images/tranzactii.png";
 
-export default function MainSection () {
+export default function MainSection (props) {
     // Setup colors for each card 
     const cardColours = ["#9571b0","#43c065","#6c94c9","#d59b5b"]
 
@@ -16,6 +16,7 @@ export default function MainSection () {
                 text = {"Bani inapoi la fiecare comanda online in magazinele partenere"}
                 image = {ImageApp}
                 backgroundColor = {cardColours[0]}
+                onClick = {() => props.clickCashClub.current.scrollIntoView()}
             />
 
             <CardMainSection 

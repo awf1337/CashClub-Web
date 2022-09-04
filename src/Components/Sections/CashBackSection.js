@@ -10,7 +10,9 @@ export default function CashBackSection() {
     return (
         <section className="cashBackContainer">
             <h3>CashBack in peste 800 de magazine partenere</h3>
+            
             <p>Primesti bani inapoi la fiecare comanda in site-urile partenere</p>
+
             <div className="cashBackButtonsContainer">
                 <a
                     className="generalButtons"
@@ -21,6 +23,7 @@ export default function CashBackSection() {
                     href="#"
                 >Magazine partenere</a>
             </div>
+
             <div className="cashBackCarousel">
                     <div className="carouselContainer" style={{animation:"50000ms linear 0s infinite normal none running moveAnim-hp-clients"}}>
                         <div className="slide">

@@ -190,6 +190,11 @@ header {
     margin: 20px 0;
     position: relative;
     min-height: 170px;
+    overflow: hiddengit;
+}
+
+.cardContainer:hover {
+    cursor: pointer;
 }
 
 .cardContainer h2 {
@@ -247,6 +252,11 @@ header {
 
 .carouselContainer {
     display: flex;
+}
+
+.cashBackCarousel {
+    width: 100%;
+    overflow: hidden;
 }
 
 .slide {
@@ -339,4 +349,13 @@ header {
 .dataFooterContainer {
     background-color: rgb(240, 240, 240);
     padding: 1em 0;
+}
+
+.dataFooterContainer p {
+    line-height: .8em;
+}
+
+.dataFooterContainer p:first-of-type {
+    font-weight: 700;
+    font-size: 1rem;
 }
