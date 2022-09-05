@@ -25,7 +25,43 @@ export default function CashBackSection() {
             </div>
 
             <div className="cashBackCarousel">
-                    <div className="carouselContainer" style={{animation:"50000ms linear 0s infinite normal none running moveAnim-hp-clients"}}>
+                    <div className="carouselContainer" style={{animation:"50000ms linear 0s infinite normal none running moveAnimation"}}>
+                        <div className="slide">
+                            <img src={Image1} alt="" />
+                        </div>
+                        <div className="slide">
+                            <img src={Image2} alt="" />
+                        </div>
+                        <div className="slide">
+                            <img src={Image3} alt="" />
+                        </div>
+                        <div className="slide">
+                            <img src={Image4} alt="" />
+                        </div>
+                        <div className="slide">
+                            <img src={Image5} alt="" />
+                        </div>
+                        <div className="slide">
+                            <img src={Image6} alt="" />
+                        </div>
+                        <div className="slide">
+                            <img src={Image1} alt="" />
+                        </div>
+                        <div className="slide">
+                            <img src={Image2} alt="" />
+                        </div>
+                        <div className="slide">
+                            <img src={Image3} alt="" />
+                        </div>
+                        <div className="slide">
+                            <img src={Image4} alt="" />
+                        </div>
+                        <div className="slide">
+                            <img src={Image5} alt="" />
+                        </div>
+                        <div className="slide">
+                            <img src={Image6} alt="" />
+                        </div>
                         <div className="slide">
                             <img src={Image1} alt="" />
                         </div>

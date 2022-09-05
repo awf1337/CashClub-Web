@@ -14,9 +14,17 @@ img {
 /* Custom properties */
 
 :root {
+    --fs-h2: 2rem;
+
     --clr-light-btn: linear-gradient(rgb(67, 192, 101), rgb(97, 213, 108));
     --clr-light: rgb(67, 192, 101);
     --clr-light-white: rgb(255, 255, 255);
+}
+
+@media (min-width: 1000px) {
+    :root {
+        --fs-h2: 3rem;
+    }
 }
 
 /* General Styles */
@@ -41,7 +49,8 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: var(--fs-h2);
+    margin: 0;
 }
 
 h3 {
@@ -63,6 +72,11 @@ h3 {
     letter-spacing: .02rem;
     text-decoration: none;
     display: inline-block;
+}
+
+.mainContainer {
+    margin-bottom: 100px;
+    padding: 0 20px;
 }
 
 /* Header Section */
@@ -138,7 +152,7 @@ header {
 }
 
 .nav-open .hamburger::before {
-    transform: rotate(90deg) translateX(-6px);
+    transform: rotate(90deg) translateX(-7px);
 }
 .nav-open .hamburger::after {
     opacity: 0;
@@ -167,30 +181,57 @@ header {
     right: 0;
 }
 
-.hamburger::before { top: 6px; }
-.hamburger::after { bottom: 6px; }
+.hamburger::before { top: 7px; }
+.hamburger::after { bottom: 7px; }
 
 /* Download Section */
-.downloadContainer {
-    margin: 40px 20px 100px;
-}
+@media (min-width: 780px) {
+    .mainContainer {
+        max-width: 1200px;
+        margin: 0 auto 100px auto;
+        padding: 0 30px;
+    }
 
-.downloadContainer h2 {
-    margin: 0;
+    .downloadContainer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .downloadContainerMain {
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .downloadContainerMain h2 {
+        margin-bottom: 1em;
+    }
+
+    .downloadContainer img {
+        width: 48%;
+    }
+
+    .downloadButton {
+        background-image: none;
+        color: rgb(0, 0, 0);
+        border: 2px solid rgb(0, 0, 0);
+        margin-top: .75rem;
+    }
+
+    .generalButtons {
+        margin-left: .8rem;
+    }
 }
 
 /* cards layout Section*/
-.mainContainer {
-    margin: 40px 20px 100px;
-}
-
 .cardContainer {
     border-radius: 1rem;
     padding: 1em 1em 3em;
     margin: 20px 0;
     position: relative;
     min-height: 170px;
-    overflow: hiddengit;
+    overflow: hidden;
 }
 
 .cardContainer:hover {
@@ -208,6 +249,7 @@ header {
     padding-right: 3.5em;
     margin: 0;
     color: rgb(255, 255, 255);
+    width: 90%;
 }
 
 .cardContainer img {
@@ -217,6 +259,12 @@ header {
     margin: 0 -57px -57px;
     width: 200px;
     transform: rotate(-40deg);
+}
+
+@media (min-width: 780px) {
+    .cardContainer {
+        margin-left: 1rem;
+    }
 }
 
 /* CashBack layout Section */
@@ -252,6 +300,7 @@ header {
 
 .carouselContainer {
     display: flex;
+    flex-flow: row nowrap;
 }
 
 .cashBackCarousel {
@@ -263,12 +312,16 @@ header {
     flex: 0 0 190px;
 }
 
-@keyframes moveAnim-hp-clients {
+.slide1 {
+    flex: 0 0 550px;
+}
+
+@keyframes moveAnimation {
     0% {
-        transform:translate3d(0, 0, 0);
+        transform:translateX(0);
     }
     100% {
-        transform:translate3d(-800px, 0, 0);
+        transform:translateX(-50%);
     }
 }
 
@@ -298,7 +351,7 @@ header {
 
 /* Discount Section */
 .discountContainer {
-    margin: 40px 20px 100px;
+    margin: 0 auto 100px;
     text-align: center;
 }
 
@@ -315,13 +368,43 @@ header {
 
 /* CashClub Section */
 .cashClubContainer {
-    margin: 40px 20px 100px;
+    margin: 0 auto 100px;
     text-align: center;
 }
 
 .cashClubContainer p {
     width: 70%;
     margin: 0 auto 1em auto;
+}
+
+.cashClubFlex {
+    display: flex;
+}
+
+.cashClubFlex img {
+    width: 50%;
+}
+
+.cashClubText {
+    text-align: start;
+}
+
+.cashClubText p {
+    margin: 0;
+}
+
+.cashClubsubmit {
+    margin: 0;
+}
+
+.cashClubInput {
+    height: 3rem;
+    outline: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 1rem 1rem 1rem 0;
+    padding: 0 2rem;
+    border-radius: .5rem;
 }
 
 /* Question Section */
