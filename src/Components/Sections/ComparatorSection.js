@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ComparatorSection() {
+export default function ComparatorSection(props) {
     return (
         <section className="comparatorContainer">
             <h3>Compara preturile la peste {"1.600.000"} de produse</h3>
@@ -9,6 +9,12 @@ export default function ComparatorSection() {
                 href="#" 
                 className="generalButtons"
             >Comparator preturi</a>
+            {props.mediaMatches && 
+                <a 
+                    href="#" 
+                    className="generalButtons"
+                >Magazine partenere</a>
+            }
             {/* dynamic carousel */}
         </section>
     )

@@ -6,21 +6,26 @@ export default function CashClub(props) {
 
     return (
         <section 
-        className="cashClubContainer mainContainer"
+        className={`cashClubContainer ${!props.mediaMatches && "mainContainer"}`}
         ref={props.myRef}
         >
             <div className={props.mediaMatches ? "cashClubFlex" : ""}>
                 <div className={props.mediaMatches ? "cashClubText" : ""}>
-                    <h3>CashClub pe mobil</h3>
+                    <h2>CashClub pe mobil</h2>
                     <p> Descarca aplicatia pe mobil si printr-un simplu click ai acces la 800 de magazine, 
                         milioane de produse si mii de bonusuri.</p>
                         {props.mediaMatches &&
-                            <form>
-                                <input 
-                                    className="cashClubInput"
-                                    value={phoneNo} 
-                                    onChange={(e) => setPhoneNo(e.target.value)} 
-                                />
+                            <form className="smsFormField">
+                                <div className="smsInputField">
+                                    <label>+40</label>
+                                    <input 
+                                        className="cashClubInput"
+                                        value={phoneNo} 
+                                        placeholder="Numar de telefon"
+                                        onChange={(e) => setPhoneNo(e.target.value)} 
+                                    />
+                                </div>
+                                
                                 <button 
                                     className="generalButtons cashClubsubmit"
                                 >Descarca Aplicatia</button>

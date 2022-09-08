@@ -9,10 +9,12 @@ import Image6 from "./Images/reduceri6.png"
 export default function DiscountSection() {
     return (
         <section className="discountContainer mainContainer">
-            <h3>Super reduceri zilnice la sute de produse</h3>
-            <p>Economiseste bani si profita de cele mai mari reduceri la produsele si serviciile tale preferate!</p>
-            <a href="#" className="generalButtons">Vezi promotii</a>
-
+            <div className="discountContent">
+                <h3>Super reduceri zilnice la sute de produse</h3>
+                <p>Economiseste bani si profita de cele mai mari reduceri la produsele si serviciile tale preferate!</p>
+                <a href="#" className="generalButtons">Vezi promotii</a>
+            </div>
+            
             <div className="discountGrid">
                 <img src={Image1} alt="" />
                 <img src={Image2} alt="" />

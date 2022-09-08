@@ -7,7 +7,7 @@ export default function DownloadSection(props) {
         <section className="mainContainer downloadContainer">
             <div className="downloadContainerMain">
                 <h2>Descarca aplicatia de mobil si economiseste bani facand cumparaturi!</h2>
-                <div className="downloadButtonsContainer">
+                <div>
                     {!props.mediaMatches && 
                         <p>Platforma de CashBack</p>
                     }

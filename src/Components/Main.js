@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React, {useRef, useState, useEffect} from "react";
 import DownloadSection from "./Sections/DownloadSection";
 import MainSection from "./Sections/MainSection";
 import CashBackSection from "./Sections/CashBackSection";
@@ -9,9 +9,24 @@ import ComparatorSection from "./Sections/ComparatorSection";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function Main()  {
+    const [showTopBtn,setShowTopBtn] = useState(false)
     const myRef = useRef(null);
     const mediaMatches = useMediaQuery('(min-width:780px)');
     
+    useEffect(() => {
+        window.addEventListener('scroll', ()=> {
+            if(window.scrollY > 400) {
+                setShowTopBtn(true);
+            }else {
+                setShowTopBtn(false);
+            }
+        })
+    },[]);
+
+    function btnScrollTop() {
+        window.scrollTo({top: 0 , behavior:"smooth"})
+    }
+
     return (
         <div>
             <DownloadSection 
@@ -22,13 +37,18 @@ export default function Main()  {
             mediaMatches = {mediaMatches}
             />
             <CashBackSection />
-            <ComparatorSection />
+            <ComparatorSection 
+            mediaMatches = {mediaMatches}
+            />
             <DiscountSection />
             <CashClub 
             myRef = {myRef}
             mediaMatches = {mediaMatches}
             />
             <QuestionsSection />
+            {showTopBtn && <div className="scroll-top-btn">
+                <button className="scrollButton" onClick={btnScrollTop}></button>
+            </div>}
         </div>
     )
 }

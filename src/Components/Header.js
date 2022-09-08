@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
 
@@ -8,7 +9,7 @@ export default function Header() {
 
     return (
         <header>
-            <h1>CashClub</h1>
+            <h1><a href="/">CashClub</a></h1>
 
             <button 
             className="nav-toggle" 
@@ -37,11 +38,11 @@ export default function Header() {
                         <a href="#" className="nav__link" onClick={() => removeNavOpen()}>Cupoane reducere</a>
                     </li>
                     <li className="nav__item" >
-                        <a href="#" className="nav__link" onClick={() => removeNavOpen()}>Contact</a>
+                        <a href="/contact" className="nav__link" onClick={() => removeNavOpen()}>Contact</a>
                     </li>
                     <li className="nav__item" >
                         <a href="#" className="nav__link" onClick={() => removeNavOpen()}>Intrebari frecvente</a>
-                    </li>
+                    </li>     
                 </ul>
             </nav>
         </header>

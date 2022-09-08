@@ -9,21 +9,23 @@ import Image6 from "./Images/carousel6.png"
 export default function CashBackSection() {
     return (
         <section className="cashBackContainer">
-            <h3>CashBack in peste 800 de magazine partenere</h3>
-            
-            <p>Primesti bani inapoi la fiecare comanda in site-urile partenere</p>
+            <div className="cashBackContent">
+                <h3>CashBack in peste 800 de magazine partenere</h3>
+                
+                <p>Primesti bani inapoi la fiecare comanda in site-urile partenere</p>
 
-            <div className="cashBackButtonsContainer">
-                <a
-                    className="generalButtons"
-                    href="#"
-                >Afla mai multe</a>
-                <a
-                    className="generalButtons transparentBotton"
-                    href="#"
-                >Magazine partenere</a>
+                <div className="cashBackButtonsContainer">
+                    <a
+                        className="generalButtons"
+                        href="#"
+                    >Afla mai multe</a>
+                    <a
+                        className="generalButtons transparentBotton"
+                        href="#"
+                    >Magazine partenere</a>
+                </div>
             </div>
-
+            
             <div className="cashBackCarousel">
                     <div className="carouselContainer" style={{animation:"50000ms linear 0s infinite normal none running moveAnimation"}}>
                         <div className="slide">
