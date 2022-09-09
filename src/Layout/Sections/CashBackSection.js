@@ -17,11 +17,11 @@ export default function CashBackSection() {
                 <div className="cashBackButtonsContainer">
                     <a
                         className="generalButtons"
-                        href="#"
+                        href="localgost:3000"
                     >Afla mai multe</a>
                     <a
                         className="generalButtons transparentBotton"
-                        href="#"
+                        href="localgost:3000"
                     >Magazine partenere</a>
                 </div>
             </div>

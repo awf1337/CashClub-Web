@@ -40,6 +40,7 @@ export default function CashClub(props) {
                     href="https://play.google.com/store/apps/details?id=m.cashclub.ro" 
                     className="generalButtons"
                     target="_blank"
+                    rel="noopener noreferrer"
                 >Descarca</a>
             }
         </section>

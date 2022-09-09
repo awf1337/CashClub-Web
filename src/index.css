@@ -621,3 +621,43 @@ h1 a {
         width: 47%;
     }
 }
+
+/* question Page */
+.question-div {
+    letter-spacing: .08rem;
+    padding: 2rem 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    box-shadow: 0 0 12px 2px rgb(0 0 0 / 10%);
+    border-radius: .8rem;
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+
+.question-div span {
+    position: relative;
+    display: inline-block;
+}
+
+.question-div p {
+    margin: 1em 0 0;
+}
+
+.question-div span::before {
+    position: absolute;
+    content: "\002B";
+    left: -1em;
+    top: 0;
+    
+}
+
+.hiddenAnswer {
+    display: none;
+}
+
+.visibleAnswer {
+    display: block;
+}

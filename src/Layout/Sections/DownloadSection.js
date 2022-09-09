@@ -16,11 +16,12 @@ export default function DownloadSection(props) {
                         href={props.mediaMatches ? "https://chrome.google.com/webstore/detail/cashclub/bmcjeckemmdkoapcmpmffabkelgknlme?hl=ro&fbclid=IwAR1eIJFJ9Sh4XHeyDL1FkrQFIdTZKB35DO4NHmfDGxYjrwcS_aJZCCjOTy0"
                             : "https://play.google.com/store/apps/details?id=m.cashclub.ro"}
                         target="_blank"
+                        rel="noopener noreferrer"
                     >{props.mediaMatches ? "Descarca Extensia" : "Descarca Aplicatia"}</a>
                     {props.mediaMatches && 
                         <a 
                         className="generalButtons downloadButton" 
-                        href="#"
+                        href="localgost:3000"
                         >Afla mai multe</a>
                     }
                 </div>
