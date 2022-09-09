@@ -1,10 +1,10 @@
 import React from "react";
-import Image1 from "./Images/carousel1.png"
-import Image2 from "./Images/carousel2.png"
-import Image3 from "./Images/carousel3.png"
-import Image4 from "./Images/carousel4.png"
-import Image5 from "./Images/carousel5.png"
-import Image6 from "./Images/carousel6.png"
+import Image1 from "../../Assets/Images/carousel1.png"
+import Image2 from "../../Assets/Images/carousel2.png"
+import Image3 from "../../Assets/Images/carousel3.png"
+import Image4 from "../../Assets/Images/carousel4.png"
+import Image5 from "../../Assets/Images/carousel5.png"
+import Image6 from "../../Assets/Images/carousel6.png"
 
 export default function CashBackSection() {
     return (

@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./Components/Header";
-import Main from "./Components/Main";
-import Footer from "./Components/Footer";
-import Contact from "./Components/Pages/Contact"
+import Header from "./Layout/Header";
+import Main from "./Layout/Main";
+import Footer from "./Layout/Footer";
+import Contact from "./Pages/Contact"
 
 import { Routes, Route } from "react-router-dom";
 

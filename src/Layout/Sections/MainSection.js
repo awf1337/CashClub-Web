@@ -1,9 +1,9 @@
 import React from "react";
 import CardMainSection from "./Cards/CardMainSection";
-import ImageApp from "./Images/aplicatiemobil.png";
-import ImageEco from "./Images/economiseste.png";
-import ImageBalance from "./Images/balanta.png";
-import ImageTansactions from "./Images/tranzactii.png";
+import ImageApp from "../../Assets/Images/aplicatiemobil.png";
+import ImageEco from "../../Assets/Images/economiseste.png";
+import ImageBalance from "../../Assets/Images/balanta.png";
+import ImageTansactions from "../../Assets/Images/tranzactii.png";
 
 export default function MainSection (props) {
     // Setup colors for each card 

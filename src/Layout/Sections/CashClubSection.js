@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import ImageCashClubMobil from "./Images/cashClubMobil.png"
+import ImageCashClubMobil from "../../Assets/Images/cashClubMobil.png"
 
 export default function CashClub(props) {
     const [phoneNo, setPhoneNo] = useState('');

@@ -1,7 +1,7 @@
 import React from "react";
-import mediaFacebook from "./Sections/Images/mediaFacebook.png"
-import mediaInstagram from "./Sections/Images/mediaInstagram.png"
-import mediaLinkedIn from "./Sections/Images/mediaLinkedin.png"
+import mediaFacebook from "../Assets/Images/mediaFacebook.png"
+import mediaInstagram from "../Assets/Images/mediaInstagram.png"
+import mediaLinkedIn from "../Assets/Images/mediaLinkedin.png"
 
 export default function Footer() {
     return (

@@ -1,5 +1,5 @@
 import React from "react";
-import downloadImage from "./Images/downloadImage.png";
+import downloadImage from "../../Assets/Images/downloadImage.png";
 
 export default function DownloadSection(props) {
     
