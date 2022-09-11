@@ -746,3 +746,17 @@ h1 a {
 .couponsListItemCode {
     text-align: center;
 }
+
+.generalButtons.read-moreBTN {
+    background-image: none;
+    width: 100%;
+    box-shadow: 0 0.2rem 1.2rem 0 rgb(0 0 0 / 10%);
+    color: inherit;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(180, 180, 180);
+    font-weight: 300;
+}
+
+.generalButtons.read-moreBTN:hover{
+    cursor: pointer;
+}
