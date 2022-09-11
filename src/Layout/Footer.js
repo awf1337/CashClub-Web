@@ -19,7 +19,7 @@ export default function Footer() {
             </div>
             
             <div className="dataFooterContainer">
-                <p>ANPC</p>
+                <p className="footerHover" onClick={() => window.open("https://anpc.ro/")}>ANPC</p>
                 <p>VAN CONSULTING SERVICES S.R.L.</p>
                 <p>CUI: 39743787</p>
                 <p>Copyright 2020 CashClub</p>

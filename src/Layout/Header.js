@@ -22,19 +22,19 @@ export default function Header() {
                 <span>CashClub</span>
                 <ul className="nav__list">
                     <li className="nav__item" >
-                        <a href="localhost:3000" className="nav__link" onClick={() => removeNavOpen()}>Autentificare</a>
+                        <a href="/login" className="nav__link" onClick={() => removeNavOpen()}>Autentificare</a>
                     </li>
                     <li className="nav__item" >
-                        <a href="localhost:3000" className="nav__link" onClick={() => removeNavOpen()}>Cashback</a>
+                        <a href="/cashback" className="nav__link" onClick={() => removeNavOpen()}>Cashback</a>
                     </li>
                     <li className="nav__item" >
-                        <a href="localhost:3000" className="nav__link" onClick={() => removeNavOpen()}>Comparator de preturi</a>
+                        <a href="/products" className="nav__link" onClick={() => removeNavOpen()}>Comparator de preturi</a>
                     </li>
                     <li className="nav__item" >
-                        <a href="localhost:3000" className="nav__link" onClick={() => removeNavOpen()}>Magazine</a>
+                        <a href="/shops" className="nav__link" onClick={() => removeNavOpen()}>Magazine</a>
                     </li>
                     <li className="nav__item" >
-                        <a href="localhost:3000" className="nav__link" onClick={() => removeNavOpen()}>Cupoane reducere</a>
+                        <a href="/coupons" className="nav__link" onClick={() => removeNavOpen()}>Cupoane reducere</a>
                     </li>
                     <li className="nav__item" >
                         <a href="/contact" className="nav__link" onClick={() => removeNavOpen()}>Contact</a>

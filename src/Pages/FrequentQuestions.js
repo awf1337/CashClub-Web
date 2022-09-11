@@ -14,6 +14,7 @@ export default function FrequentQuestions() {
     }
 
     const questionElement = questionsData.map((questionEl,questionIndex) => {
+
         return (
             <div 
                 className="question-div" 
@@ -22,7 +23,7 @@ export default function FrequentQuestions() {
                 onClick={() => hiddenToggle(questionIndex)}
             >
                 <div>
-                    <span>{questionEl.question}</span>
+                    <span className={questionEl.isHidden ? "pseudoBeforePlus" : "pseudoBeforeLine"}>{questionEl.question}</span>
                     <p className={questionEl.isHidden ? "hiddenAnswer" : "visibleAnswer"}>{questionEl.answer}</p>
                 </div>
             </div>
