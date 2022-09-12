@@ -760,3 +760,29 @@ h1 a {
 .generalButtons.read-moreBTN:hover{
     cursor: pointer;
 }
+
+/* Shop Page */
+
+.shopListItemWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.shopListItemImg {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopListItemImg img {
+    width: 40%;
+}
+
+.shopListItemCode {
+    border-top: 1px solid rgb(183, 180, 180);
+    text-align: center;
+}
