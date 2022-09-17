@@ -786,3 +786,16 @@ h1 a {
     border-top: 1px solid rgb(183, 180, 180);
     text-align: center;
 }
+
+.searchField {
+    position: relative;
+}
+
+.searchItem {
+    margin-bottom: .3rem;
+}
+
+.searchItem:hover {
+    background-color: var(--clr-light);
+    cursor: pointer;
+}

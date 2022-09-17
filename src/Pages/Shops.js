@@ -5,7 +5,9 @@ import ShopCardDisplay from "../Components/ShopCardDisplay"
 export default function Shops() {
     const [categoriesName, setCategoriesName] = useState([]);
     const [categoriesData, setCategoriesData] = useState([]);
-    const [idSelected, setIdSelected]  =useState();
+    const [idSelected, setIdSelected]  = useState();
+    const [searchField, setSearchField] = useState("");
+    const [displaySearch, setDisplaySearch] = useState([]);
 
     async function getCategoriesName() {
         const res = await fetch("https://api.cashclub.ro/api/categories?pageNumber=1");
@@ -26,9 +28,15 @@ export default function Shops() {
         getCategoriesData();
     },[]);
 
-    console.log(categoriesName);
-    console.log(categoriesData);
-    console.log(idSelected)
+    function setDisplayBySearch(e) {
+        const filteredCategoriesData = categoriesData.filter(item => item.name===e);
+        setDisplaySearch(filteredCategoriesData);
+    }
+
+   // console.log(categoriesName);
+   // console.log(categoriesData);
+   // console.log(displaySearch);
+   // console.log(idSelected);
 
     const couponsDisplayElement = categoriesData.map((element,i) => {
         if (idSelected === undefined){
@@ -49,6 +57,17 @@ export default function Shops() {
                 />
             )
         }  
+        return null;
+    })
+
+    const couponsDisplayBySearch = displaySearch.map((e,i) => {
+        return (
+            <ShopCardDisplay
+                key = {i}
+                logo = {e.logo}
+                discount = {e.cashbackValue}
+            />
+        )
     })
 
     return (
@@ -58,10 +77,15 @@ export default function Shops() {
                 de bonusurile obtinute, cu fiecare sesiune de cumparaturi online.</p>
                 <ShopSort 
                 categoriesName = {categoriesName}
-                idSelected = {(e)=> setIdSelected(e.target.value)}
+                idSelected = {(e) => {setIdSelected(e.target.value); setDisplaySearch([])}}
+                valueField = {(e) => setSearchField(e.target.value)}
+                cleanField = {() => setSearchField("")}
+                shopList = {categoriesData}
+                inputValue = {searchField}
+                setDataDisplay = {(e) => setDisplayBySearch(e)}
                 />
 
-                {couponsDisplayElement}
+                {displaySearch.length !== 0 ? couponsDisplayBySearch : couponsDisplayElement}
         </div>
     )
 }
