@@ -11,7 +11,7 @@ export default function CashClub(props) {
         >
             <div className={props.mediaMatches ? "cashClubFlex" : ""}>
                 <div className={props.mediaMatches ? "cashClubText" : ""}>
-                    <h2>CashClub pe mobil</h2>
+                    <h2>{props.title}</h2>
                     <p> Descarca aplicatia pe mobil si printr-un simplu click ai acces la 800 de magazine, 
                         milioane de produse si mii de bonusuri.</p>
                         {props.mediaMatches &&

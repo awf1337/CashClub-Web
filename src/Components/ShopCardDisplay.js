@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ShopCardDisplay(props) {
     return (
-            <div className="couponsListItem">
+            <div className="shopCouponsList">
                 <a href="/login">
                     <div className="shopListItemWrapper">
                         <div className="shopListItemImg">

@@ -84,8 +84,10 @@ export default function Shops() {
                 inputValue = {searchField}
                 setDataDisplay = {(e) => setDisplayBySearch(e)}
                 />
-
-                {displaySearch.length !== 0 ? couponsDisplayBySearch : couponsDisplayElement}
+                <div className="gridDisplayCard">
+                    {displaySearch.length !== 0 ? couponsDisplayBySearch : couponsDisplayElement}
+                </div>
+                
         </div>
     )
 }

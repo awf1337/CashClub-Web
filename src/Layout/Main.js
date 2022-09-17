@@ -44,6 +44,7 @@ export default function Main()  {
             <CashClub 
             myRef = {myRef}
             mediaMatches = {mediaMatches}
+            title = {"CashClub pe mobil"}
             />
             <QuestionsSection />
             {showTopBtn && <div className="scroll-top-btn">
