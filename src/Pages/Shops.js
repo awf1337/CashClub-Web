@@ -33,11 +33,6 @@ export default function Shops() {
         setDisplaySearch(filteredCategoriesData);
     }
 
-   // console.log(categoriesName);
-   // console.log(categoriesData);
-   // console.log(displaySearch);
-   // console.log(idSelected);
-
     const couponsDisplayElement = categoriesData.map((element,i) => {
         if (idSelected === undefined){
             return (
@@ -72,10 +67,13 @@ export default function Shops() {
 
     return (
         <div className="mainContainer">
-            <h2>Magazine partenere</h2>
-            <p>Exploreaza noi produse si servicii in cele 800 de magazine partenere si bucura-te 
-                de bonusurile obtinute, cu fiecare sesiune de cumparaturi online.</p>
-                <ShopSort 
+            <div className="shopText">
+                <h2>Magazine partenere</h2>
+                <p>Exploreaza noi produse si servicii in cele 800 de magazine partenere si bucura-te 
+                    de bonusurile obtinute, cu fiecare sesiune de cumparaturi online.</p>
+            </div>
+            
+            <ShopSort 
                 categoriesName = {categoriesName}
                 idSelected = {(e) => {setIdSelected(e.target.value); setDisplaySearch([])}}
                 valueField = {(e) => setSearchField(e.target.value)}
@@ -83,10 +81,10 @@ export default function Shops() {
                 shopList = {categoriesData}
                 inputValue = {searchField}
                 setDataDisplay = {(e) => setDisplayBySearch(e)}
-                />
-                <div className="gridDisplayCard">
-                    {displaySearch.length !== 0 ? couponsDisplayBySearch : couponsDisplayElement}
-                </div>
+            />
+            <div className="gridDisplayCard">
+                {displaySearch.length !== 0 ? couponsDisplayBySearch : couponsDisplayElement}
+            </div>
                 
         </div>
     )

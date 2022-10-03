@@ -816,6 +816,10 @@ h1 a {
     margin-top: 2rem;
 }
 
+.shopText p {
+    max-width: 500px;
+}
+
 @media (min-width: 780px) {
     .gridDisplayCard {
         display: grid;
@@ -825,5 +829,13 @@ h1 a {
 
     .shopListItemImg img {
         width: 70%;
+    }
+
+    .sort-group {
+        display: flex;
+    }
+
+    .searchField {
+        margin-right: 1rem;
     }
 }
